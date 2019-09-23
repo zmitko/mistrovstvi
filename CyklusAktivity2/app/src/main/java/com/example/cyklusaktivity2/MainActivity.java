@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     private static final String LAD = "ZmenaStavu";
@@ -96,12 +97,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         Log.i(LAD, "onSaveInstanceState");
+        final EditText textBox =(EditText) findViewById(R.id.editText);
+        CharSequence sText = textBox.getText();
+        outState.putCharSequence("UlozenyText", sText);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         Log.i(LAD, "onRestoreInstanceState");
+        final EditText textBox = (EditText) findViewById(R.id.editText);
+        CharSequence sText = savedInstanceState.getCharSequence("UlozenyText");
+        textBox.setText(sText);
+
     }
 
 
