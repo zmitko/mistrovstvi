@@ -1,3 +1,5 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">10px</dimen>
+    <dimen name="activity_vertical_margin">15px</dimen>
 </resources>
