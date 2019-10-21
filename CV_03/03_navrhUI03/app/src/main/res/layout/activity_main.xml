@@ -1,0 +1,20 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.navrhui3.MainActivity">
+    <fragment
+        android:id="@+id/hlavny_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        class="com.example.navrhui3.FragmentDetail" />
+    <fragment
+        android:id="@+id/bocny_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        class="com.example.navrhui3.FragmentZoznam" />
+</RelativeLayout>

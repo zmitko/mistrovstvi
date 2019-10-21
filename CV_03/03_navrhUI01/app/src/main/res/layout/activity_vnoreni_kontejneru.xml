@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+        <Button
+            android:text="B1"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"/>
+        <Button
+            android:text="B2"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"/>
+        <Button
+            android:text="B3"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+        <TextView
+            android:text="Text 1" android:textSize="15pt"
+            android:background="@color/cardview_light_background"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <TextView
+            android:text="Text 2" android:textSize="15pt"
+            android:background="@color/cardview_dark_background"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>
