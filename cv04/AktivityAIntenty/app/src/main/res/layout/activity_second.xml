@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="left"
+    android:padding="20dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zadejte Vaše jméno: "/>
+        <EditText
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/zadane_jmeno"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Potvrdit"
+            android:onClick="onPosliJmeno"/>
+        <TextView
+            android:id="@+id/zprava_od_aktivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zpráva od aktivity"/>
+    </LinearLayout>
+</LinearLayout>
