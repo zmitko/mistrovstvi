@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Fragmenty1</string>
-    <string name="action_settings">Settings</string>
-    <string name="portrait_text">Portrait - orientácia na výšku</string>
-    <string name="landscape_text">Landscape - orientácia na šírku</string>
-
-</resources>
