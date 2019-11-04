@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <fragment class="com.cp.masterdetail.ZoznamFragment"
+
+        android:id="@+id/zoznam"
+
+        android:layout_width="0dp"
+
+        android:layout_height="match_parent"
+
+        android:layout_weight="1"/>
+
+    <FrameLayout android:id="@+id/detaily"
+
+        android:layout_width="0dp"
+
+        android:layout_height="match_parent"
+
+        android:background="?android:attr/detailsElementBackground"
+
+        android:layout_weight="3"/>
+</LinearLayout>

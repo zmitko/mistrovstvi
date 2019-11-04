@@ -7,7 +7,6 @@
     tools:context=".MainActivity">
 
 
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -31,6 +30,18 @@
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
+    <fragment
+        android:id="@+id/landscape_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <fragment
+        android:id="@+id/portrait_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <include layout="@layout/content_main" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
