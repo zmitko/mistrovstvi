@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:key="@+id/mujPreferenceFragment">
+
+    <EditTextPreference
+        android:dialogMessage="Nick Name"
+        android:dialogTitle="Edituj Nick Name"
+        android:key="nickname"
+        android:negativeButtonText="Zrus"
+        android:positiveButtonText="OK"
+        android:title="Nick Name" />
+</PreferenceScreen>
