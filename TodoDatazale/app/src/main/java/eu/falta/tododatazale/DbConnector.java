@@ -23,7 +23,7 @@ public class DbConnector {
 // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
         values.put(DtbDefinition.ToDoEntry.COLUMN_NAME_TITLE, title);
-        values.put(DtbDefinition.ToDoEntry.COLUMN_NAME_STATE, 1);
+        values.put(DtbDefinition.ToDoEntry.COLUMN_NAME_STATE, 0);
 
 // Insert the new row, returning the primary key value of the new row
         long newRowId = db.insert(DtbDefinition.ToDoEntry.TABLE_NAME, null, values);
