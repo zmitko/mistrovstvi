@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Def. PKMN::"
+        android:textSize="30sp" />
+    <TextView
+        android:id="@+id/type_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/type"
+        android:layout_toRightOf="@id/type"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/effect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Attack will:"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:text="Reset" >
+    </Button>
+    <LinearLayout
+        android:id="@+id/prvni_typy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_above="@id/druhe_typy"
+        >
+        <Button
+            android:id="@+id/normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:background="#989a62"
+            android:text="Normal" >
+        </Button>
+        <Button
+            android:id="@+id/fight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/normal"
+            android:text="Fighting"
+            android:textColor="#ffffff"
+            android:background="#b31b1a"
+            >
+        </Button>
+        <Button
+            android:id="@+id/flying"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/fight"
+            android:textColor="#ffffff"
+            android:background="#9774ef"
+            android:text="Flying"
+            >
+        </Button>
+        <Button
+            android:id="@+id/poison"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/flying"
+            android:textColor="#ffffff"
+            android:background="#8e2391"
+            android:text="Poison"
+            >
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/druhe_typy"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/treti_typy"
+        >
+        <Button
+            android:id="@+id/ground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:background="#d9b64f"
+            android:text="Ground" >
+        </Button>
+        <Button
+            android:id="@+id/rock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/normal"
+            android:textColor="#ffffff"
+            android:background="#aa9222"
+            android:text="Rock" >
+        </Button>
+        <Button
+            android:id="@+id/bug"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/fight"
+            android:textColor="#ffffff"
+            android:background="#98af00"
+            android:text="Bug" >
+        </Button>
+        <Button
+            android:id="@+id/ghost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/flying"
+            android:textColor="#ffffff"
+            android:background="#5c4088"
+            android:text="Ghost" >
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/treti_typy"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ctvrte_typy"
+        >
+        <Button
+            android:id="@+id/steel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:background="#a9a8c6"
+            android:text="Steel" >
+        </Button>
+        <Button
+            android:id="@+id/fire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/normal"
+            android:textColor="#ffffff"
+            android:background="#ec6b1a"
+            android:text="Fire" >
+        </Button>
+        <Button
+            android:id="@+id/water"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/fight"
+            android:textColor="#ffffff"
+            android:background="#5476f0"
+            android:text="Water" >
+        </Button>
+        <Button
+            android:id="@+id/grass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/flying"
+            android:textColor="#ffffff"
+            android:background="#65c338"
+            android:text="Grass" >
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ctvrte_typy"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/pate_typy"
+        >
+        <Button
+            android:id="@+id/electric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:background="#f7ca0b"
+            android:text="Electric" >
+        </Button>
+        <Button
+            android:id="@+id/psychic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/normal"
+            android:textColor="#ffffff"
+            android:background="#f63a74"
+            android:text="Psychic" >
+        </Button>
+        <Button
+            android:id="@+id/ice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/fight"
+            android:textColor="#ffffff"
+            android:background="#86d0d0"
+            android:text="Ice" >
+        </Button>
+        <Button
+            android:id="@+id/dragon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/flying"
+            android:textColor="#ffffff"
+            android:background="#5b00fb"
+            android:text="Dragon" >
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/pate_typy"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/reset_button"
+        >
+        <Button
+            android:id="@+id/dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:background="#5d4637"
+            android:text="Dark" >
+        </Button>
+        <Button
+            android:id="@+id/fairy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/normal"
+            android:textColor="#ffffff"
+            android:background="#ff99bd"
+            android:text="Fairy" >
+        </Button>
+    </LinearLayout>
+</RelativeLayout>

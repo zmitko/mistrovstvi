@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='Ukol2_Pokemon_typechart'
