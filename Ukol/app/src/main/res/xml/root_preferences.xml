@@ -1,0 +1,61 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Profile">
+
+        <EditTextPreference
+            android:key="username"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Username"
+            app:useSimpleSummaryProvider="true"
+            app:icon="@drawable/ic_person_black_24dp" />
+
+        <EditTextPreference
+            android:key="mail"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Email"
+            app:icon="@drawable/ic_email_black_24dp"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            android:defaultValue="+420"
+            android:key="phone"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Phone number"
+            app:icon="@drawable/ic_local_phone_black_24dp"
+            app:useSimpleSummaryProvider="true" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:icon="@drawable/ic_visibility_black_24dp"
+            android:key="visible"
+            android:title="Public profile" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Notifications">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="invitations"
+            android:title="Invitations" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="social"
+            android:title="Social" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="new_post"
+            android:dependency="social"
+            android:title="New post" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="new_suggestion"
+            android:dependency="social"
+            android:title="New friend suggestion" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
