@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:fillViewport="false"
+    android:keepScreenOn="true">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        tools:context="cz.rehamza.klient_stromy.MainActivity">
+
+        <TextView
+            android:id="@+id/lbl_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/sign_in"
+            android:textSize="36sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sw_locate" />
+
+        <ProgressBar
+            android:id="@+id/prg_sing_in"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_login" />
+
+        <Button
+            android:id="@+id/sw_locate"
+            android:layout_width="wrap_content"
+            android:layout_height="82dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_rounded_off"
+            android:paddingStart="24dp"
+            android:paddingLeft="24dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="24dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="12dp"
+            android:text="@string/sw_off"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_search" />
+
+        <TextView
+            android:id="@+id/txt_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Data"
+            android:textSize="30sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/btn_get_data"
+            app:layout_constraintStart_toStartOf="@+id/btn_get_data"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Hledání"
+            android:textSize="30sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/sw_locate"
+            app:layout_constraintStart_toStartOf="@+id/sw_locate"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_get_data"
+            android:layout_width="wrap_content"
+            android:layout_height="82dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginRight="48dp"
+            android:background="@drawable/button_rounded_update"
+            android:paddingStart="24dp"
+            android:paddingLeft="24dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="24dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="12dp"
+            android:text="Stáhnout data"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_data" />
+
+        <TextView
+            android:id="@+id/lbl_tree_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Název"
+            android:textColor="@color/colorBrownTextDark"
+            android:textSize="36sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/div_dist_info" />
+
+        <TextView
+            android:id="@+id/lbl_tree_latin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Název"
+            android:textColor="@color/colorBrownTextLight"
+            android:textSize="30sp"
+            android:textStyle="italic"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_tree_name" />
+
+        <TextView
+            android:id="@+id/lbl_origin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="24dp"
+            android:text="Zasazeno"
+            android:textColor="@color/colorBrownTextDark"
+            android:textSize="30sp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_tree_latin" />
+
+        <TextView
+            android:id="@+id/lbl_planted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="8dp"
+            android:text="Zasazeno"
+            android:textColor="@color/colorBrownTextDark"
+            android:textSize="30sp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_origin" />
+
+        <TextView
+            android:id="@+id/lbl_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="8dp"
+            android:text="Výška"
+            android:textColor="@color/colorBrownTextDark"
+            android:textSize="30sp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_planted" />
+
+        <ImageView
+            android:id="@+id/img_tree_photo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            android:background="@color/colorPrimary"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_height" />
+
+        <TextView
+            android:id="@+id/txt_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:padding="12dp"
+            android:text="Popis"
+            android:textColor="@color/colorBrownTextDark"
+            android:textSize="30sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_tree_photo" />
+
+        <TextView
+            android:id="@+id/txt_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Vzdálenost"
+            android:textColor="@color/colorBrownTextDark"
+            android:textSize="30sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_closest_name" />
+
+        <TextView
+            android:id="@+id/txt_closest_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:textColor="@color/colorBrownTextDark"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/div_btns_dist"
+            tools:visibility="invisible" />
+
+        <View
+            android:id="@+id/div_btns_dist"
+            style="@style/Divider"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sw_locate" />
+
+        <View
+            android:id="@+id/div_dist_info"
+            style="@style/Divider"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_distance" />
+
+        <ImageView
+            android:id="@+id/img_rehamza"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/div_btns_dist"
+            app:layout_constraintEnd_toStartOf="@+id/btn_get_data"
+            app:layout_constraintStart_toEndOf="@+id/sw_locate"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/rehamza_transparent" />
+
+        <ImageView
+            android:id="@+id/img_logo1"
+            android:layout_width="0dp"
+            android:layout_height="420dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/div_dist_info"
+            app:srcCompat="@mipmap/park_logo" />
+
+        <ImageView
+            android:id="@+id/img_logo2"
+            android:layout_width="0dp"
+            android:layout_height="190dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_logo1"
+            app:srcCompat="@mipmap/logo_ubz_cr" />
+
+        <Button
+            android:id="@+id/btn_navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/button_cancel_search"
+            android:text="Zrušit"
+            android:textColor="#574631"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@id/div_dist_info"
+            app:layout_constraintEnd_toStartOf="@+id/txt_closest_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/div_btns_dist" />
+
+        <ImageView
+            android:id="@+id/img_needle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@id/div_dist_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_closest_name"
+            app:layout_constraintTop_toBottomOf="@id/div_btns_dist"
+            app:srcCompat="@mipmap/navigation" />
+
+        <CheckBox
+            android:id="@+id/chBox_visited"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:textSize="30sp"
+            android:text="Navštíveno"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/lbl_planted"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lbl_planted" />
+
+        <ImageView
+            android:id="@+id/img_close_enough"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/img_needle"
+            app:layout_constraintEnd_toEndOf="@id/img_needle"
+            app:layout_constraintStart_toStartOf="@+id/img_needle"
+            app:layout_constraintTop_toTopOf="@id/img_needle"
+            app:srcCompat="@mipmap/close_enough" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

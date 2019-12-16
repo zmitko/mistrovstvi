@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">\u0020 Digitální průvodce</string>
+    <string name="sign_in">Přihlašování...</string>
+    <string name="loading_db">Načítání...</string>
+    <string name="btn_retry">Zkusit znovu</string>
+    <string name="sign_in_failed">Přihlášení se nezdařilo</string>
+    <string name="load_failed">Načítání selhalo</string>
+    <string name="search_trees">Hledání...</string>
+    <string name="sw_on">Zapnuto</string>
+    <string name="sw_off">Vypnuto</string>
+    <string name="lbl_description">Popis</string>
+    <string name="no_desc">Žádný popis.</string>
+    <string name="dload_message">Přejete si stáhnout data? Může to trvat několik minut. Zařízení musí být připojeno ke konkrétní místní síti.</string>
+</resources>
