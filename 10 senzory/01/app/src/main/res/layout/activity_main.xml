@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <TextView
+        android:id="@+id/x_popis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="5dp"
+        android:text="X: "
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/x_hodnota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/x_popis"
+        android:padding="5dp"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/y_popis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="5dp"
+        android:text="Y: "
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/y_hodnota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/y_popis"
+        android:padding="5dp"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/z_popis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="5dp"
+        android:text="Z: "
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/z_hodnota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/z_popis"
+        android:padding="5dp"
+        android:textSize="20sp" />
+    ...
+</RelativeLayout>
