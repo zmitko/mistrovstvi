@@ -25,6 +25,7 @@ public class MainActivity extends Activity implements SensorEventListener {
     private float[] zrychleni = null;
     private float[] magnet = null;
     private double natoceniStupne;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,17 +38,20 @@ public class MainActivity extends Activity implements SensorEventListener {
         mMeter = sm.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
         if (aMeter == null || mMeter == null) finish();
     }
+
     @Override
     protected void onResume() {
         super.onResume();
         sm.registerListener(this, aMeter, SensorManager.SENSOR_DELAY_NORMAL);
         sm.registerListener(this, mMeter, SensorManager.SENSOR_DELAY_NORMAL);
     }
+
     @Override
     protected void onPause() {
         super.onPause();
         sm.unregisterListener(this);
     }
+
     @Override
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
@@ -71,8 +75,10 @@ public class MainActivity extends Activity implements SensorEventListener {
             }
         }
     }
+
     @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {}
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+    }
 
     public class CifernikView extends View {
         int sirka, vyska, stredX, stredY, topX, leftY;
@@ -80,9 +86,13 @@ public class MainActivity extends Activity implements SensorEventListener {
                 R.drawable.compass);
         int bmpSirka = bmp.getWidth();
         int bmpVyska = bmp.getHeight();
+
         public CifernikView(Context context) {
             super(context);
-        };
+        }
+
+        ;
+
         @Override
         protected void onSizeChanged(int w, int h, int oldw, int oldh) {
             sirka = layout.getWidth();
@@ -92,10 +102,11 @@ public class MainActivity extends Activity implements SensorEventListener {
             leftY = stredX - bmpSirka / 2;
             topX = stredY - bmpVyska / 2;
         }
+
         @Override
         protected void onDraw(Canvas canvas) {
             canvas.save();
-            canvas.rotate((float) - natoceniStupne, stredX, stredY);
+            canvas.rotate((float) -natoceniStupne, stredX, stredY);
             canvas.drawBitmap(bmp, leftY, topX, null);
             canvas.restore();
         }
