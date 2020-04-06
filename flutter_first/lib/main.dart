@@ -91,6 +91,9 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Text("Mistrovství!"),
+            Text(
+                "Žolíky: https://github.com/Fjarik/Zoliky/tree/master/MobileApp/zoliky_teachers"),
             Text(
               'You have pushed the button this many times:',
             ),
